@@ -1,0 +1,58 @@
+export const caseStudies = [
+  {
+    title: 'Corporate Tax Optimization for Manufacturing Giant',
+    category: 'Tax Optimization',
+    industry: 'Manufacturing',
+    color: 'from-primary-blue to-blue-400',
+    challenge: 'A mid-sized manufacturing firm was facing an annual tax burden of ₹2.5 Cr with no structured tax planning framework, leading to missed deductions and inefficient capital allocation.',
+    solution: 'We conducted a comprehensive tax health check, restructured the corporate entity for optimal tax efficiency, implemented a systematic advance tax planning calendar, and identified ₹80L in unclaimed deductions.',
+    result: '35% reduction in effective tax rate, saving over ₹87 Lakhs annually. The firm now operates with a proactive tax strategy aligned to their 5-year growth plan.',
+    stats: [
+      { label: 'Tax Savings', value: '₹87L' },
+      { label: 'Rate Reduction', value: '35%' },
+      { label: 'Timeline', value: '6 Months' },
+    ],
+  },
+  {
+    title: 'GST Compliance Overhaul for E-Commerce Chain',
+    category: 'GST Compliance',
+    industry: 'E-Commerce',
+    color: 'from-growth-green to-emerald-500',
+    challenge: 'An e-commerce chain with 50+ outlets across 8 states was struggling with multi-state GST compliance, resulting in frequent notices and penalties totaling ₹15L annually.',
+    solution: 'We implemented a centralized GST management system, automated return filing across all entities, resolved pending disputes, and trained the internal team on compliance best practices.',
+    result: '100% on-time filing achieved across all entities. Zero penalties in 18 months. Input Tax Credit recovery of ₹42L from previously missed claims.',
+    stats: [
+      { label: 'ITC Recovered', value: '₹42L' },
+      { label: 'Filing Rate', value: '100%' },
+      { label: 'Penalties Saved', value: '₹15L/yr' },
+    ],
+  },
+  {
+    title: 'Startup Financial Roadmap & Series A Funding',
+    category: 'Startup Advisory',
+    industry: 'Startups',
+    color: 'from-violet-500 to-purple-500',
+    challenge: 'A tech startup with strong product-market fit lacked the financial documentation and projections needed to approach institutional investors for their Series A round.',
+    solution: 'We built comprehensive financial models with 3-year projections, prepared investor-ready documentation including due diligence packs, structured the cap table, and assisted in DPIIT registration for Startup India benefits.',
+    result: 'Successfully secured ₹2 Cr in Series A funding within 6 months. The startup achieved Startup India recognition and availed tax exemptions under Section 80-IAC.',
+    stats: [
+      { label: 'Funding Raised', value: '₹2 Cr' },
+      { label: 'Timeline', value: '6 Months' },
+      { label: 'Tax Benefit', value: '3 Years' },
+    ],
+  },
+  {
+    title: 'Internal Audit & Risk Framework for Hospital Chain',
+    category: 'Audit & Assurance',
+    industry: 'Healthcare',
+    color: 'from-rose-500 to-red-500',
+    challenge: 'A growing hospital chain with 5 branches had no internal audit framework, leading to revenue leakage, inventory mismanagement, and regulatory non-compliance across units.',
+    solution: 'We designed and implemented a comprehensive internal audit framework, established SOPs for financial controls, deployed quarterly audit cycles, and created a real-time compliance dashboard.',
+    result: 'Identified and plugged revenue leakage worth ₹30L annually. Achieved 100% regulatory compliance across all branches within 12 months.',
+    stats: [
+      { label: 'Revenue Saved', value: '₹30L/yr' },
+      { label: 'Compliance', value: '100%' },
+      { label: 'Branches', value: '5 Units' },
+    ],
+  },
+];
