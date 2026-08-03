@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Award, Compass, Eye, ShieldCheck, Heart, Users, Target, CheckCircle2 } from 'lucide-react';
+import { Award, Compass, Eye, ShieldCheck, Heart, Target, CheckCircle2 } from 'lucide-react';
 import PageHero from '../components/ui/PageHero';
 import { team } from '../data/team';
 import ConsultationCTA from '../components/sections/ConsultationCTA';
@@ -119,22 +119,37 @@ export default function AboutPage() {
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            {team.map((member) => (
-              <div key={member.name} className="bg-light-grey rounded-2xl overflow-hidden border border-medium-grey text-center hover:shadow-xl transition-all duration-300">
-                <div className="h-64 overflow-hidden relative">
-                  <img src={member.image} alt={member.name} className="w-full h-full object-cover" />
-                  <div className="absolute inset-0 bg-linear-to-t from-dark-navy/60 to-transparent" />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {team.map((member, idx) => (
+              <motion.div
+                key={member.name}
+                custom={idx}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{ duration: 0.7, delay: idx * 0.1, ease: 'easeOut' }}
+                className="partner-card"
+              >
+                <div className="partner-card-img-wrapper">
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    className="partner-card-img"
+                  />
                 </div>
-                <div className="p-6">
-                  <h3 className="text-lg font-bold text-dark-navy mb-1">{member.name}</h3>
-                  <div className="text-xs font-bold text-primary-blue uppercase tracking-wider mb-3">{member.role}</div>
-                  <p className="text-xs text-text-body leading-relaxed mb-4">{member.bio}</p>
-                  <div className="inline-block bg-white text-[0.62rem] font-bold text-text-muted uppercase tracking-wider px-3 py-1 rounded border border-medium-grey">
-                    {member.experience}
+                <div className="p-6 text-center flex flex-col justify-between grow">
+                  <div>
+                    <h3 className="text-xl font-extrabold text-dark-navy mb-1 font-heading">{member.name}</h3>
+                    <div className="text-xs font-bold text-primary-blue uppercase tracking-wider mb-3">{member.role}</div>
+                    <p className="text-xs text-text-body leading-relaxed mb-4">{member.bio}</p>
+                  </div>
+                  <div>
+                    <div className="inline-block bg-light-grey text-[0.68rem] font-bold text-dark-navy uppercase tracking-wider px-3.5 py-1.5 rounded-full border border-medium-grey">
+                      {member.experience}
+                    </div>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>

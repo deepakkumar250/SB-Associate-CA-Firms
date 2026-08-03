@@ -4,21 +4,15 @@ import { ChevronLeft, ChevronRight, Star, Quote } from 'lucide-react';
 
 const testimonials = [
   {
-    name: 'Rajesh Kumar',
+    name: 'Shiv Kumar',
     role: 'CEO, TechVista Solutions',
     text: 'SB Associate has been instrumental in streamlining our financial operations. Their tax planning strategies saved us over 30% in annual tax liability. Truly exceptional expertise.',
     rating: 5,
   },
   {
-    name: 'Priya Mohanty',
+    name: 'Madhusmita Sahu',
     role: 'Founder, GreenLeaf Organics',
     text: 'From GST compliance to financial advisory, the team at SB Associate delivers with precision and care. They understood our startup needs and provided solutions that accelerated our growth.',
-    rating: 5,
-  },
-  {
-    name: 'Anil Patel',
-    role: 'Director, Patel Industries',
-    text: 'We have been working with SB Associate for over 10 years. Their professionalism, deep knowledge, and proactive approach have made them an indispensable partner for our business.',
     rating: 5,
   },
 ];

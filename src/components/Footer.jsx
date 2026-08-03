@@ -90,17 +90,17 @@ export default function Footer() {
               Contact Info
             </h4>
             <div className="space-y-4">
-              <a href="tel:+919876543210" className="flex items-start gap-3 text-white/50 hover:text-white transition-colors no-underline text-sm">
+              <a href="tel:+917008679523" className="flex items-start gap-3 text-white/50 hover:text-white transition-colors no-underline text-sm">
                 <Phone size={18} className="text-primary-green shrink-0 mt-0.5" />
-                +91 98765 43210
+                +91 70086 79523
               </a>
-              <a href="mailto:info@sbassociate.in" className="flex items-start gap-3 text-white/50 hover:text-white transition-colors no-underline text-sm">
+              <a href="mailto:sbassociateodisha@gmail.com" className="flex items-start gap-3 text-white/50 hover:text-white transition-colors no-underline text-sm">
                 <Mail size={18} className="text-primary-green shrink-0 mt-0.5" />
-                info@sbassociate.in
+                sbassociateodisha@gmail.com
               </a>
               <div className="flex items-start gap-3 text-white/50 text-sm">
                 <MapPin size={18} className="text-primary-green shrink-0 mt-0.5" />
-                Bhubaneswar, Odisha, India
+                Patia, Bhubaneswar, 751024
               </div>
             </div>
           </div>

@@ -154,7 +154,7 @@ export default function HomePage() {
                 <img
                   src="/images/about-team.png"
                   alt="SB Associate CA Team"
-                  className="w-full h-[450px] object-cover"
+                  className="w-full h-112.5 object-cover"
                 />
                 <div className="absolute inset-0 bg-linear-to-t from-dark-navy/70 to-transparent" />
                 
@@ -501,22 +501,37 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            {team.map((member) => (
-              <div key={member.name} className="bg-light-grey rounded-2xl overflow-hidden border border-medium-grey text-center hover:shadow-xl transition-all duration-300">
-                <div className="h-64 overflow-hidden relative">
-                  <img src={member.image} alt={member.name} className="w-full h-full object-cover" />
-                  <div className="absolute inset-0 bg-linear-to-t from-dark-navy/60 to-transparent" />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {team.map((member, idx) => (
+              <motion.div
+                key={member.name}
+                custom={idx}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{ duration: 0.7, delay: idx * 0.1, ease: 'easeOut' }}
+                className="partner-card"
+              >
+                <div className="partner-card-img-wrapper">
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    className="partner-card-img"
+                  />
                 </div>
-                <div className="p-6">
-                  <h3 className="text-lg font-bold text-dark-navy mb-1">{member.name}</h3>
-                  <div className="text-xs font-bold text-primary-blue uppercase tracking-wider mb-3">{member.role}</div>
-                  <p className="text-xs text-text-body leading-relaxed mb-4">{member.bio}</p>
-                  <div className="inline-block bg-white text-[0.62rem] font-bold text-text-muted uppercase tracking-wider px-3 py-1 rounded border border-medium-grey">
-                    {member.experience}
+                <div className="p-6 text-center flex flex-col justify-between grow">
+                  <div>
+                    <h3 className="text-xl font-extrabold text-dark-navy mb-1 font-heading">{member.name}</h3>
+                    <div className="text-xs font-bold text-primary-blue uppercase tracking-wider mb-3">{member.role}</div>
+                    <p className="text-xs text-text-body leading-relaxed mb-4">{member.bio}</p>
+                  </div>
+                  <div>
+                    <div className="inline-block bg-light-grey text-[0.68rem] font-bold text-dark-navy uppercase tracking-wider px-3.5 py-1.5 rounded-full border border-medium-grey">
+                      {member.experience}
+                    </div>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -537,7 +552,7 @@ export default function HomePage() {
               “
             </div>
 
-            <div className="min-h-[140px]">
+            <div className="min-h-35">
               <p className="text-dark-navy text-lg leading-relaxed italic mb-8 font-medium">
                 "{testimonials[currentTestimonial].text}"
               </p>
@@ -594,8 +609,8 @@ export default function HomePage() {
 
               <div className="grid sm:grid-cols-2 gap-6 pt-6">
                 {[
-                  { title: 'Call Office', desc: '+91 98765 43210', info: 'Mon-Sat (10AM - 7PM)' },
-                  { title: 'Email Address', desc: 'info@sbassociate.in', info: '24/7 Advisory Response' }
+                  { title: 'Call Office', desc: '+91 70086 79523', info: 'Mon-Sat (10AM - 7PM)' },
+                  { title: 'Email Address', desc: 'sbassociateodisha@gmail.com', info: '24/7 Advisory Response' }
                 ].map((item, idx) => (
                   <div key={idx} className="bg-light-grey rounded-xl p-5 border border-medium-grey">
                     <h4 className="font-extrabold text-primary-blue text-sm uppercase tracking-wider mb-2">{item.title}</h4>

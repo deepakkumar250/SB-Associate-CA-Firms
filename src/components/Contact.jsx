@@ -26,9 +26,9 @@ export default function Contact() {
   };
 
   const contactInfo = [
-    { icon: <Phone size={22} />, label: 'Phone', value: '+91 98765 43210', href: 'tel:+919876543210' },
-    { icon: <Mail size={22} />, label: 'Email', value: 'info@sbassociate.in', href: 'mailto:info@sbassociate.in' },
-    { icon: <MapPin size={22} />, label: 'Address', value: 'Bhubaneswar, Odisha, India', href: '#' },
+    { icon: <Phone size={22} />, label: 'Phone', value: '+91 70086 79523', href: 'tel:+91 70086 79523' },
+    { icon: <Mail size={22} />, label: 'Email', value: 'sbassociateodisha@gmail.com', href: 'mailto:sbassociateodisha@gmail.com' },
+    { icon: <MapPin size={22} />, label: 'Address', value: 'Patia, Bhubaneswar, 751024', href: '#' },
   ];
 
   return (

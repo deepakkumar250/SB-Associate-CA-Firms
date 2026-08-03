@@ -12,9 +12,11 @@ export default function ContactPage() {
   };
 
   const handleWhatsApp = () => {
-    const message = `Hello SB Associate, my name is ${formData.name}. I am looking for ${formData.service} and would like to schedule a consultation.`;
-    const url = `https://wa.me/919876543210?text=${encodeURIComponent(message)}`;
-    window.open(url, '_blank');
+    const message = formData.name
+      ? `Hello SB Associate, my name is ${formData.name}. I am looking for ${formData.service} and would like to schedule a consultation.`
+      : 'Hello SB Associate, I would like to know more about your Chartered Accountant services.';
+    const url = `https://wa.me/917008679523?text=${encodeURIComponent(message)}`;
+    window.open(url, '_blank', 'noopener,noreferrer');
   };
 
   return (
@@ -46,9 +48,9 @@ export default function ContactPage() {
               {/* Detail Blocks */}
               <div className="space-y-6">
                 {[
-                  { title: 'Office Address', desc: 'DLF Cybercity, Patia, Bhubaneswar, Odisha, 751024', icon: MapPin },
-                  { title: 'Calling Desk', desc: '+91 98765 43210', icon: Phone },
-                  { title: 'Email Enquiries', desc: 'info@sbassociate.in', icon: Mail },
+                  { title: 'Office Address', desc: 'Patia, Bhubaneswar, 751024', icon: MapPin },
+                  { title: 'Calling Desk', desc: '+91 70086 79523', icon: Phone },
+                  { title: 'Email Enquiries', desc: 'sbassociateodisha@gmail.com', icon: Mail },
                   { title: 'Working Hours', desc: 'Mon - Sat (10:00 AM - 07:00 PM)', icon: Clock }
                 ].map((item, idx) => {
                   const Icon = item.icon;
@@ -102,7 +104,7 @@ export default function ContactPage() {
                         <input
                           required
                           type="text"
-                          placeholder="John Doe"
+                          placeholder="Enter your name"
                           value={formData.name}
                           onChange={(e) => setFormData((prev) => ({ ...prev, name: e.target.value }))}
                           className="w-full px-4 py-3 rounded-lg border border-medium-grey bg-white text-dark-navy text-xs focus:outline-none focus:border-primary-blue transition-all"
@@ -113,7 +115,7 @@ export default function ContactPage() {
                         <input
                           required
                           type="tel"
-                          placeholder="+91 98765 43210"
+                          placeholder="+91"
                           value={formData.phone}
                           onChange={(e) => setFormData((prev) => ({ ...prev, phone: e.target.value }))}
                           className="w-full px-4 py-3 rounded-lg border border-medium-grey bg-white text-dark-navy text-xs focus:outline-none focus:border-primary-blue transition-all"
@@ -127,7 +129,7 @@ export default function ContactPage() {
                         <input
                           required
                           type="email"
-                          placeholder="john@example.com"
+                          placeholder="Enter your E-mail"
                           value={formData.email}
                           onChange={(e) => setFormData((prev) => ({ ...prev, email: e.target.value }))}
                           className="w-full px-4 py-3 rounded-lg border border-medium-grey bg-white text-dark-navy text-xs focus:outline-none focus:border-primary-blue transition-all"
@@ -137,7 +139,7 @@ export default function ContactPage() {
                         <label className="block text-xs font-bold text-text-muted uppercase tracking-wider mb-2">Company Name (Optional)</label>
                         <input
                           type="text"
-                          placeholder="Acme Corp"
+                          placeholder="SolvionTech Pvt Ltd"
                           value={formData.company}
                           onChange={(e) => setFormData((prev) => ({ ...prev, company: e.target.value }))}
                           className="w-full px-4 py-3 rounded-lg border border-medium-grey bg-white text-dark-navy text-xs focus:outline-none focus:border-primary-blue transition-all"
@@ -185,7 +187,7 @@ export default function ContactPage() {
           </div>
 
           {/* Google Map Section */}
-          <div className="mt-20 rounded-3xl overflow-hidden border-4 border-light-grey shadow-xl h-[450px]">
+          <div className="mt-20 rounded-3xl overflow-hidden border-4 border-light-grey shadow-xl h-112.5">
             <iframe
               title="SB Associate Office Location Map"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3740.6698656157833!2d85.8073587!3d20.3552084!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a1908e0647693d5%3A0xc3cfd61b65e94b29!2sDLF%20Cybercity!5e0!3m2!1sen!2sin!4v1717520000000!5m2!1sen!2sin"

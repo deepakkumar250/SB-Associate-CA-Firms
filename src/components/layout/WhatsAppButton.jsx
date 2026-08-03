@@ -2,10 +2,10 @@ import { MessageCircle } from 'lucide-react';
 
 export default function WhatsAppButton() {
   const handleWhatsApp = () => {
-    const phoneNumber = '919876543210';
-    const message = 'Hello SB Associate, I am looking for financial advisory/compliance services and would like to schedule a consultation.';
+    const phoneNumber = '917008679523';
+    const message = 'Hello SB Associate, I would like to know more about your Chartered Accountant services.';
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-    window.open(url, '_blank');
+    window.open(url, '_blank', 'noopener,noreferrer');
   };
 
   return (
